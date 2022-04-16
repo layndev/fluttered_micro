@@ -6,10 +6,6 @@ import 'navigation/widget_builder_args.dart';
 import 'service_locator/service_locator.dart';
 
 abstract class BaseApp {
-  
-  BaseApp() {
-    locator = GetIt.instance;
-  }
 
   List<Module> get modules;
   Map<String, WidgetBuilderArgs> get baseRoutes;
@@ -25,6 +21,8 @@ abstract class BaseApp {
   }
 
   void registerInjection() {
+    locator = GetIt.instance;
+    
     if (modules.isNotEmpty) {
       for (Module module in modules) {
         module.injectionRegister();
