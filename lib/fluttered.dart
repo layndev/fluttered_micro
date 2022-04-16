@@ -1,5 +1,7 @@
 library fluttered;
 
+export 'src/service_locator/service_locator.dart';
+
 export 'src/messages/event_bus.dart';
 
 export 'src/base_app.dart';

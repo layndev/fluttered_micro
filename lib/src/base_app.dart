@@ -4,6 +4,7 @@ import 'module/module.dart';
 import 'navigation/widget_builder_args.dart';
 
 abstract class BaseApp {
+
   List<Module> get modules;
   Map<String, WidgetBuilderArgs> get baseRoutes;
   final Map<String, WidgetBuilderArgs> routes = {};
@@ -19,16 +20,16 @@ abstract class BaseApp {
 
   void registerInjection() {
     if (modules.isNotEmpty) {
-      for (Module module in modules) {
-        module.injectionRegister();
+      for (Module m in modules) {
+        m.injectionRegister();
       }
     }
   }
 
   void registerListener() {
     if (modules.isNotEmpty) {
-      for (Module module in modules) {
-        module.createListener();
+      for (Module m in modules) {
+        m.createListener();
       }
     }
   }
