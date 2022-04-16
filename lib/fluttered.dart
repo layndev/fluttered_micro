@@ -1,5 +1,7 @@
 library fluttered;
 
+export 'package:get_it/get_it.dart';
+
 export 'src/messages/event_bus.dart';
 
 export 'src/base_app.dart';
