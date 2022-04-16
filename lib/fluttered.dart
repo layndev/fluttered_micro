@@ -1,6 +1,6 @@
 library fluttered;
 
-export 'package:get_it/get_it.dart';
+export 'src/service_locator/service_locator.dart';
 
 export 'src/messages/event_bus.dart';
 
