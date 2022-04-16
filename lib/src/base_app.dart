@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 
 import 'module/module.dart';
 import 'navigation/widget_builder_args.dart';
-import 'service_locator/service_locator.dart';
 
 abstract class BaseApp {
 
@@ -21,19 +19,17 @@ abstract class BaseApp {
   }
 
   void registerInjection() {
-    locator = GetIt.instance;
-    
     if (modules.isNotEmpty) {
-      for (Module module in modules) {
-        module.injectionRegister();
+      for (Module m in modules) {
+        m.injectionRegister();
       }
     }
   }
 
   void registerListener() {
     if (modules.isNotEmpty) {
-      for (Module module in modules) {
-        module.createListener();
+      for (Module m in modules) {
+        m.createListener();
       }
     }
   }
