@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
 import 'module/module.dart';
 import 'navigation/widget_builder_args.dart';
+import 'service_locator/service_locator.dart';
 
 abstract class BaseApp {
+  
+  BaseApp() {
+    locator = GetIt.instance;
+  }
+
   List<Module> get modules;
   Map<String, WidgetBuilderArgs> get baseRoutes;
   final Map<String, WidgetBuilderArgs> routes = {};
