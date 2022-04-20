@@ -34,7 +34,7 @@ abstract class BaseApp {
     }
   }
 
-  Route<dynamic> onGenerateRoute(RouteSettings routerSettings) {
+  Route<dynamic>? onGenerateRoute(RouteSettings routerSettings) {
     var routerName = routerSettings.name;
     var routerArgs = routerSettings.arguments;
 

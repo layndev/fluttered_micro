@@ -1,17 +1,16 @@
 name: fluttered
 description: A package for scaffolding Flutter apps
-version: 0.0.1
-author:
+version: 1.0.0+7
 homepage:
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
-  flutter: ">=1.17.0"
+  sdk: ">=2.15.0 <3.0.0"
+  flutter:
 
 dependencies:
   flutter:
     sdk: flutter
-  get_it:
+  get_it: ^7.2.0
 
 dev_dependencies:
   flutter_test:
