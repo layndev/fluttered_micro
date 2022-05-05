@@ -1,4 +1,4 @@
-library fluttered;
+library fluttered_micro;
 
 export 'src/service_locator/service_locator.dart';
 

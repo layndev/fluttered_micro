@@ -1,4 +1,4 @@
-# fluttered
+# fluttered_micro
 
 A new Flutter package project.
 
